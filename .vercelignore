@@ -1,16 +1,12 @@
-# Ignore everything
-*
-
-# Allow Python files
-!*.py
-!**/*.py
-
-# Allow requirements and vercel config
-!requirements.txt
-!vercel.json
-
-# Ignore specific Python files (re-ignore after whitelist)
-api/utils/upload_vectore_data.py
-api/utils/bypass_key_gen.py
-.github/
+*.md
+*.json
+venv/
+__pycache__/
 .git/
+.github/
+assets/
+*.pyc
+
+# Ignore utility scripts not needed at runtime
+api/utils/upload_vectorstore_data.py
+api/utils/bypass_key_gen.py
