@@ -57,7 +57,7 @@ Markdown Response
 ## Project Structure
 
 ```
-ask-yashas-llm/
+ask-yashas-ragbot/
 ├── api/
 │   ├── endpoints/
 │   │   ├── answer.py         # POST /api/prompt
