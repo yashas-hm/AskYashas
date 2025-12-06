@@ -1,0 +1,316 @@
+{
+  "about": {
+    "name": "Yashas Majmudar",
+    "title": "Full Stack Developer & AI Engineer",
+    "summary": "Full Stack Virtuoso wielding both frontend finesse and backend brilliance. Specializes in Flutter for cross-platform mobile development, Machine Learning & AI with Python and LangChain, and building scalable backend systems with FastAPI and Node.js. Passionate about crafting seamless digital experiences and engineering intelligent systems.",
+    "highlights": [
+      "Cross-platform mobile development with Flutter",
+      "Machine Learning and AI with Python, LangChain, and LLMs",
+      "Backend development with FastAPI, Node.js, and Express.js",
+      "Cloud architecture with AWS and GCP",
+      "DevOps with Docker, Kubernetes, and GitHub Actions"
+    ]
+  },
+  "skills": {
+    "domains": ["Frontend", "Backend", "Databases", "DevOps", "Full Stack", "Mobile App Development", "Machine Learning & AI"],
+    "languages": ["Dart", "JavaScript", "TypeScript", "Python", "Java", "C/C++", "Kotlin", "Swift", "Bash"],
+    "frameworks": ["Flutter", "FastAPI", "Node.js", "Express.js", "RESTful APIs", "LangChain"],
+    "databases": ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "ChromaDB"],
+    "tools": ["Git", "Docker", "Kubernetes", "GitHub Actions", "AWS", "GCP", "Jira", "Android", "LLM", "Ollama"]
+  },
+  "experience": [
+    {
+      "role": "Software Developer Engineer",
+      "company": "UNC Eshelman School of Pharmacy",
+      "duration": "November 2024 – February 2025",
+      "type": "part-time",
+      "highlights": [
+        "Engineered and launched a custom educational game using Flutter to enhance diagnostic skills in doctors, resulting in 40% increase in knowledge retention",
+        "Introduced analytics to track user performance, boosting training effectiveness by 25%"
+      ]
+    },
+    {
+      "role": "Senior Software Developer Engineer",
+      "company": "PracticeBuzz",
+      "duration": "June 2023 – July 2024",
+      "type": "full-time",
+      "highlights": [
+        "Led cross-platform app development using Flutter, boosting client base by 30% within six months",
+        "Architected APIs and databases with Node.js, Express.js, and SQL, improving processing efficiency by 40% and achieving 99.9% uptime",
+        "Designed a content management system, cutting update time by 50%",
+        "Integrated payments interface, increasing online sales by 15%",
+        "Achieved promotion within 8 months by driving significant organizational impact"
+      ]
+    },
+    {
+      "role": "Software Developer Intern",
+      "company": "Multiple Startups",
+      "duration": "July 2020 – May 2023",
+      "type": "internship",
+      "highlights": [
+        "Delivered app development projects for seven companies with 10K+ downloads and 4.3 star average rating",
+        "Integrated Firebase and Cloud Services, speeding up data retrieval by 40%",
+        "Implemented scalable ML models and games, increasing user retention by 25%"
+      ]
+    }
+  ],
+  "startup_experience": [
+    {
+      "role": "Software Developer Intern",
+      "company": "Camp Yellow",
+      "duration": "April 2023 – May 2023",
+      "highlights": [
+        "Implemented parallel downloading and file compression, reducing download time by 50%",
+        "Collaborated with UI/UX designers, leading to 30% increase in user engagement",
+        "Built secure APIs for authentication serving 1000+ daily active users"
+      ]
+    },
+    {
+      "role": "Flutter Developer Intern",
+      "company": "Grahnumb",
+      "duration": "March 2023 – April 2023",
+      "highlights": [
+        "Developed game mechanics using Flutter Flame engine, increasing user engagement by 20%",
+        "Implemented encryption and secure authentication with less than 3% error rate",
+        "Created visually stunning graphics leading to 30% increase in positive reviews"
+      ]
+    },
+    {
+      "role": "Flutter Developer Intern",
+      "company": "EcoConsumer Solutions Pvt. Ltd.",
+      "duration": "June 2022 – August 2022",
+      "highlights": [
+        "Used GetX for state management, reducing development time by 20%",
+        "Developed B2C mobile app with Firebase, increasing user engagement by 40%",
+        "Implemented Hive caching, improving app performance by 30%"
+      ]
+    },
+    {
+      "role": "Android Developer Intern",
+      "company": "Raahi Mobi Pvt. Ltd.",
+      "duration": "May 2022 – June 2022",
+      "highlights": [
+        "Transformed wireframe designs into functional code, increasing engagement by 15%",
+        "Integrated caching mechanism, reducing loading time by 20%",
+        "Developed RESTful search and create API, reducing development time by 30%"
+      ]
+    },
+    {
+      "role": "Junior Mobile Developer Intern",
+      "company": "Surjal Services Pvt. Ltd.",
+      "duration": "January 2021 – February 2021",
+      "highlights": [
+        "Developed WhatsApp auto responder app with 95% response rate",
+        "Integrated Firebase for real-time data, reducing response time by 50%",
+        "Optimized Android native services, reducing battery consumption by 30%"
+      ]
+    },
+    {
+      "role": "Android Developer Intern",
+      "company": "99 Yellow",
+      "duration": "August 2020 – December 2020",
+      "highlights": [
+        "Implemented Room Database storage, reducing data retrieval time by 30%",
+        "Executed unit tests with JUnit achieving 95% test coverage"
+      ]
+    },
+    {
+      "role": "Android Developer Intern",
+      "company": "Shree Mahesh Heritage",
+      "duration": "June 2020 – July 2020",
+      "highlights": [
+        "Developed web browser app with 100,000+ downloads and 4-star rating",
+        "Integrated offline storage with Room Database",
+        "Optimized threading, reducing app loading time by 50%"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AskYashas",
+      "description": "A personalized RAG chatbot that answers questions about Yashas with precision and context-awareness. Combines a language model with semantic search for grounded, factual responses.",
+      "skills": ["Python", "RAG", "LangChain", "Serverless", "LLM"],
+      "link": "https://github.com/yashas-hm/ask-yashas-llm"
+    },
+    {
+      "name": "Henchman",
+      "description": "An all-in-one interactive command-line tool for creating, setting up, and managing development projects.",
+      "skills": ["JavaScript", "Bash"],
+      "link": "https://github.com/yashas-hm/henchman"
+    },
+    {
+      "name": "Illness Lab",
+      "description": "A virtual escape room game teaching medical residents disease detection, starting with diabetes. Combines interactive learning with problem-solving.",
+      "skills": ["Flutter", "Game Development"],
+      "link": "https://yashas-hm-unc.github.io/illness-lab-website/"
+    },
+    {
+      "name": "Copter War",
+      "description": "A fast-paced 2D arcade game where you navigate a helicopter, dodge obstacles, and shoot enemies.",
+      "skills": ["JavaScript"],
+      "link": "https://github.com/yashas-hm/copter-war"
+    },
+    {
+      "name": "MedTourism Co.",
+      "description": "A comprehensive medical tourism app with clinic search, community forums, health tracking, meal planning, and real-time support.",
+      "skills": ["Flutter", "Node.js", "JavaScript", "TypeScript", "MariaDB", "Python"],
+      "link": "https://github.com/yashas-hm/just-documentation/blob/main/MedTourismCo/MedTourismCo.md"
+    },
+    {
+      "name": "DentaVacation",
+      "description": "Flutter app revolutionizing dental care with quizzes, videos, chat, habit tracker, cost calculator, and Docker-based forum. Achieved 40% increase in user engagement.",
+      "skills": ["Flutter", "Node.js", "JavaScript", "TypeScript", "SQL", "Python"],
+      "link": "https://github.com/yashas-hm/just-documentation/blob/main/DentaVacation/DentaVacation.md"
+    },
+    {
+      "name": "Spotter: Find your Spot!",
+      "description": "Tailored spot suggestions with community engagement and local discounts. Increased user engagement by 40% using Firebase, Google Cloud, and BLoC.",
+      "skills": ["Flutter", "Firebase", "Maps SDK"],
+      "link": "https://github.com/spotter-find-your-spot/spotter"
+    },
+    {
+      "name": "ASL Gesture Detection",
+      "description": "Machine Learning model that converts American Sign Language gestures to text using TensorFlow and MediaPipe.",
+      "skills": ["Python", "TensorFlow", "MediaPipe"],
+      "link": "https://github.com/yashas-hm/ASL-Gesture-Sensing"
+    },
+    {
+      "name": "Day Night Switch",
+      "description": "A customizable Flutter widget for toggling between day and night themes with smooth transitions.",
+      "skills": ["Flutter", "Animations"],
+      "link": "https://github.com/yashas-hm/day-night-themed-switcher"
+    },
+    {
+      "name": "Glow App Bar",
+      "description": "A Flutter widget showing glowing transitions on index change, fully customizable.",
+      "skills": ["Flutter", "Animations"],
+      "link": "https://pub.dev/packages/glow_bottom_app_bar"
+    },
+    {
+      "name": "Direct Message",
+      "description": "Lets users send WhatsApp messages to unsaved numbers instantly.",
+      "skills": ["Flutter"],
+      "link": "https://play.google.com/store/apps/details?id=dev.yashashm.directmessage"
+    },
+    {
+      "name": "AutoWhatsapp",
+      "description": "Android app automating WhatsApp replies for enhanced messaging efficiency.",
+      "skills": ["Android", "Background Services", "Firebase"],
+      "link": "https://github.com/yashas-hm/AutoWhatsapp"
+    },
+    {
+      "name": "Smart Glass",
+      "description": "Low-cost efficient AR Smart Glass prototype using Arduino and C++.",
+      "skills": ["IoT", "Arduino", "AR", "C++"],
+      "link": "https://github.com/yashas-hm/Smart-Glass"
+    },
+    {
+      "name": "Space Invaders",
+      "description": "Re-creation of the classic Space Invaders game using JavaFX.",
+      "skills": ["Java", "JavaFX"],
+      "link": "https://github.com/yashas-hm/Space_Invaders_JavaFX"
+    },
+    {
+      "name": "Recipe Scraper API",
+      "description": "A simple web scraper API for recipes built with Flask.",
+      "skills": ["Python", "Flask"],
+      "link": "https://github.com/yashas-hm/Recipe-Scraper-API"
+    },
+    {
+      "name": "Faculty Exam Assigner",
+      "description": "GUI-based system that randomly assigns faculties to exam slots with constraints on reoccurrence.",
+      "skills": ["Python", "Tkinter", "Pandas"],
+      "link": "https://github.com/yashas-hm/Exam_Supervision_Assigner"
+    },
+    {
+      "name": "MIDI Drums",
+      "description": "A simple, cost-efficient MIDI drum set using Arduino and C++.",
+      "skills": ["IoT", "Arduino", "C++"],
+      "link": "https://github.com/yashas-hm/Arduino-MIDI-Drums"
+    }
+  ],
+  "volunteering": [
+    {
+      "role": "Backend Developer",
+      "organization": "App Team Carolina",
+      "duration": "September 2024 - December 2024"
+    },
+    {
+      "role": "President",
+      "organization": "Student Activity Cell, Indus University",
+      "duration": "June 2021 – June 2022",
+      "highlights": [
+        "Managed a team of 30 students",
+        "Successfully executed over 80 events"
+      ]
+    },
+    {
+      "role": "Google Android Jams Facilitator",
+      "organization": "Google Developer Student Clubs, Indus University",
+      "duration": "December 2021 – January 2022",
+      "highlights": [
+        "Organized and led three educational events on Android development"
+      ]
+    },
+    {
+      "role": "Team Leader",
+      "organization": "Multiple National Level Hackathons",
+      "duration": "May 2019 – May 2023",
+      "highlights": [
+        "Led teams of 3-5 students in intensive competition environments"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "On-Screen Navigation with Hand Gestures using Computer Vision",
+      "journal": "IJSER (International Journal of Scientific & Engineering Research)",
+      "date": "November 2022",
+      "highlights": [
+        "Developed computer vision-based hand gesture navigation with 95% accuracy",
+        "Reduced reliance on touchpad/mouse by 50%"
+      ]
+    },
+    {
+      "title": "Image Segmentation and Deep Learning for Plant Disease Detection",
+      "journal": "Journal of Harbin Institute of Technology",
+      "date": "December 2022",
+      "highlights": [
+        "Implemented advanced image segmentation (HSV, color correction, flood fill)",
+        "Trained CNN on 30,000+ leaf images achieving 97.95% validation accuracy"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "name": "Smart India Hackathon 2022 (Finals)",
+      "project": "Fake News Detection AI Website & API"
+    },
+    {
+      "name": "Nirma University National Hackathon 2022 (1st Place)",
+      "project": "American Sign Language gesture detector using Computer Vision"
+    },
+    {
+      "name": "Nirma University National Hackathon 2021 (1st Place)",
+      "project": "Cheque Scanner OCR Mobile App"
+    },
+    {
+      "name": "Parul University National Hackathon 2020 (1st Place)",
+      "project": "AR Weather App"
+    },
+    {
+      "name": "Indus University National e-Hackathon 2019 (1st Place)",
+      "project": "IoT MR Smart Glass"
+    },
+    {
+      "name": "Student Startup and Innovation Program 2019 (2nd Place)",
+      "note": "Awarded by the Chief Minister of Gujarat"
+    }
+  ],
+  "links": {
+    "website": "https://yashashm.dev",
+    "linkedin": "https://linkedin.com/in/yashashm",
+    "github": "https://github.com/yashas-hm",
+    "blog": "https://yashashm.medium.com"
+  }
+}

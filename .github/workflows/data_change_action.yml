@@ -1,54 +1,30 @@
-name: Build VectorStore and Deploy to Railway
+name: Update Upstash Vector on Data Change
 
 on:
-  # Optional to trigger from GitHub UI
   workflow_dispatch:
-  # Trigger on branch push
   push:
     branches:
       - main
     paths:
-      - rag_data.txt
+      - rag_data.json
+
 jobs:
-  deploy:
+  update-vectors:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
 
-      - name: Cone with PAT
-        run: |
-          git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git .
-          git config --global user.email yashashm.dev@gmail.com
-          git config --global user.name yashas-hm
-          git checkout main
-
-      - name: Fetch all branches
-        run: git fetch --all
-
       - name: Install Dependencies
-        run: pip install -r requirements.txt
+        run: pip install google-generativeai upstash-vector
 
-      - name: Merge to production
-        run: |
-          git checkout production
-          git merge main
-
-      - name: Remove vectorstore from gitignore
-        run: |
-          TARGET="/vectorstore"
-          echo "Removing '$TARGET' from .gitignore..."
-          grep -v "^$TARGET\$" .gitignore > .gitignore.tmp && mv .gitignore.tmp .gitignore
-          git rm --cached -r .
-          git add .
-
-      - name: Generate Vectorstore
-        run: |
-          rm -rf ./vectorstore
-          python vectorestore_generator.py
-
-      - name: Push to production with PAT
-        run: |
-          git push --set-upstream origin production
+      - name: Upload to Upstash Vector
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+          UPSTASH_VECTOR_REST_URL: ${{ secrets.UPSTASH_VECTOR_REST_URL }}
+          UPSTASH_VECTOR_REST_TOKEN: ${{ secrets.UPSTASH_VECTOR_REST_TOKEN }}
+        run: python api/utils/upload_vectorstore_data.py --workflow
