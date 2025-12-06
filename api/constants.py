@@ -1,6 +1,6 @@
 LLM_MODEL = 'gemini-2.0-flash'
 
-EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+EMBEDDING_MODEL = "models/text-embedding-004"
 
 AI_MSG_KEY = 'AI'
 
