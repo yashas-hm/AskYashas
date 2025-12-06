@@ -1,5 +1,9 @@
-from dotenv import load_dotenv
-load_dotenv()
+import os
+
+# Load .env file only in local development (not on Vercel)
+if os.path.exists('.env'):
+    from dotenv import load_dotenv
+    load_dotenv()
 
 from api.endpoints import default, health_check, answer
 from api.utils.middleware import SecurityMiddleware
