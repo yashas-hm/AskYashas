@@ -14,4 +14,5 @@ async def answer_endpoint(query: QueryModel):
         result = pipeline.invoke(query=query.query, history=query.history)
         return JSONResponse(content={"response": result}, status_code=200)
     except Exception as e:
+        print(e)
         raise HTTPException(status_code=500, detail=str(e))

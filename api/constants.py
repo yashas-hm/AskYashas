@@ -1,3 +1,5 @@
+LLM_MODEL_FALLBACK = 'gemma-3-27b-it'
+
 LLM_MODEL = 'gemini-2.0-flash'
 
 EMBEDDING_MODEL = "models/text-embedding-004"

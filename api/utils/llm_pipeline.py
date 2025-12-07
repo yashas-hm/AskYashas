@@ -29,7 +29,7 @@ import os
 import google.generativeai as genai
 from upstash_vector import Index
 
-from api.constants import LLM_MODEL, AI_MSG_KEY, HUMAN_MSG_KEY, BOT, NAME, EMBEDDING_MODEL
+from api.constants import LLM_MODEL, LLM_MODEL_FALLBACK, AI_MSG_KEY, HUMAN_MSG_KEY, BOT, NAME, EMBEDDING_MODEL
 
 
 def get_prompt(query: str, context: str, history: str) -> str:
@@ -74,6 +74,7 @@ Context about {NAME}:
 User Question: {query}
 
 Respond in markdown:"""
+
 
 class LLMPipeline:
     """
@@ -147,7 +148,7 @@ class LLMPipeline:
 
     def _generate_response(self, query: str, context: str, history: str) -> str:
         """
-        Generate response using Gemini LLM.
+        Generate response using Gemini LLM with fallback on rate limit.
 
         Args:
             query: User's question
@@ -158,20 +159,29 @@ class LLMPipeline:
             Markdown-formatted response from the LLM
         """
         self._ensure_genai()
+        prompt = get_prompt(query, context, history)
 
-        model = genai.GenerativeModel(LLM_MODEL)
-        response = model.generate_content(
-            get_prompt(query, context, history),
-            generation_config=genai.GenerationConfig(
-                candidate_count=1,
-                max_output_tokens=2048,
-            )
-        )
+        # Try primary model first, fallback on rate limit
+        for model_name in [LLM_MODEL, LLM_MODEL_FALLBACK]:
+            try:
+                model = genai.GenerativeModel(model_name)
+                response = model.generate_content(
+                    prompt,
+                    generation_config=genai.GenerationConfig(
+                        candidate_count=1,
+                        max_output_tokens=2048,
+                    )
+                )
+                return response.text
+            except Exception as e:
+                error_msg = str(e).lower()
+                is_rate_limit = "429" in str(e) or "violation" in error_msg
 
-        # Ensure we get the full response
-        if response.candidates and response.candidates[0].content.parts:
-            return "".join(part.text for part in response.candidates[0].content.parts)
-        return response.text
+                # If rate limited, and we have a fallback, try next model
+                if is_rate_limit and model_name != LLM_MODEL_FALLBACK:
+                    continue
+                # Otherwise, re-raise the error
+                raise
 
     def invoke(self, query: str, history: list) -> str:
         """
