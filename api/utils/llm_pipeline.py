@@ -128,7 +128,7 @@ class LLMPipeline:
         )
         return result['embedding']
 
-    def _search_similar(self, query_embedding: list[float], top_k: int = 5) -> list[str]:
+    def _search_similar(self, query_embedding: list[float], top_k: int = 10) -> list[str]:
         """
         Search Upstash Vector for similar documents.
 

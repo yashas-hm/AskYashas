@@ -12,13 +12,65 @@
     ]
   },
   "skills": {
-    "domains": ["Frontend", "Backend", "Databases", "DevOps", "Full Stack", "Mobile App Development", "Machine Learning & AI"],
-    "languages": ["Dart", "JavaScript", "TypeScript", "Python", "Java", "C/C++", "Kotlin", "Swift", "Bash"],
-    "frameworks": ["Flutter", "FastAPI", "Node.js", "Express.js", "RESTful APIs", "LangChain"],
-    "databases": ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "ChromaDB"],
-    "tools": ["Git", "Docker", "Kubernetes", "GitHub Actions", "AWS", "GCP", "Jira", "Android", "LLM", "Ollama"]
+    "domains": [
+      "Frontend",
+      "Backend",
+      "Databases",
+      "DevOps",
+      "Full Stack",
+      "Mobile App Development",
+      "Machine Learning & AI"
+    ],
+    "languages": [
+      "Dart",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Java",
+      "C/C++",
+      "Kotlin",
+      "Swift",
+      "Bash"
+    ],
+    "frameworks": [
+      "Flutter",
+      "FastAPI",
+      "Node.js",
+      "Express.js",
+      "RESTful APIs",
+      "LangChain"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Firebase",
+      "ChromaDB"
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "AWS",
+      "GCP",
+      "Jira",
+      "Android",
+      "LLM",
+      "Ollama"
+    ]
   },
   "experience": [
+    {
+      "role": "Software Developer Engineer",
+      "company": "Albiware LLC",
+      "duration": "May 2025 – Present",
+      "type": "part-time",
+      "highlights": [
+        "Refactored legacy codebases, slashing crash rates by 40% and synthesized user analytics to orchestrate UX improvements, boosting engagement by 20%.",
+        "Implemented custom UI components to enhance user experience and align with modern design standards, focusing on clean\narchitecture, reusability, and scalability in Flutter development."
+      ]
+    },
     {
       "role": "Software Developer Engineer",
       "company": "UNC Eshelman School of Pharmacy",
@@ -54,7 +106,7 @@
       ]
     }
   ],
-  "startup_experience": [
+  "startup": [
     {
       "role": "Software Developer Intern",
       "company": "Camp Yellow",
@@ -127,109 +179,113 @@
   ],
   "projects": [
     {
-      "name": "AskYashas",
-      "description": "A personalized RAG chatbot that answers questions about Yashas with precision and context-awareness. Combines a language model with semantic search for grounded, factual responses.",
-      "skills": ["Python", "RAG", "LangChain", "Serverless", "LLM"],
-      "link": "https://github.com/yashas-hm/ask-yashas-llm"
-    },
-    {
       "name": "Henchman",
       "description": "An all-in-one interactive command-line tool for creating, setting up, and managing development projects.",
-      "skills": ["JavaScript", "Bash"],
+      "skills": [
+        "JavaScript",
+        "Bash"
+      ],
       "link": "https://github.com/yashas-hm/henchman"
     },
     {
       "name": "Illness Lab",
       "description": "A virtual escape room game teaching medical residents disease detection, starting with diabetes. Combines interactive learning with problem-solving.",
-      "skills": ["Flutter", "Game Development"],
+      "skills": [
+        "Flutter",
+        "Game Development"
+      ],
       "link": "https://yashas-hm-unc.github.io/illness-lab-website/"
-    },
-    {
-      "name": "Copter War",
-      "description": "A fast-paced 2D arcade game where you navigate a helicopter, dodge obstacles, and shoot enemies.",
-      "skills": ["JavaScript"],
-      "link": "https://github.com/yashas-hm/copter-war"
     },
     {
       "name": "MedTourism Co.",
       "description": "A comprehensive medical tourism app with clinic search, community forums, health tracking, meal planning, and real-time support.",
-      "skills": ["Flutter", "Node.js", "JavaScript", "TypeScript", "MariaDB", "Python"],
+      "skills": [
+        "Flutter",
+        "Node.js",
+        "JavaScript",
+        "TypeScript",
+        "MariaDB",
+        "Python"
+      ],
       "link": "https://github.com/yashas-hm/just-documentation/blob/main/MedTourismCo/MedTourismCo.md"
     },
     {
       "name": "DentaVacation",
       "description": "Flutter app revolutionizing dental care with quizzes, videos, chat, habit tracker, cost calculator, and Docker-based forum. Achieved 40% increase in user engagement.",
-      "skills": ["Flutter", "Node.js", "JavaScript", "TypeScript", "SQL", "Python"],
+      "skills": [
+        "Flutter",
+        "Node.js",
+        "JavaScript",
+        "TypeScript",
+        "SQL",
+        "Python"
+      ],
       "link": "https://github.com/yashas-hm/just-documentation/blob/main/DentaVacation/DentaVacation.md"
     },
     {
       "name": "Spotter: Find your Spot!",
       "description": "Tailored spot suggestions with community engagement and local discounts. Increased user engagement by 40% using Firebase, Google Cloud, and BLoC.",
-      "skills": ["Flutter", "Firebase", "Maps SDK"],
+      "skills": [
+        "Flutter",
+        "Firebase",
+        "Maps SDK"
+      ],
       "link": "https://github.com/spotter-find-your-spot/spotter"
     },
     {
       "name": "ASL Gesture Detection",
       "description": "Machine Learning model that converts American Sign Language gestures to text using TensorFlow and MediaPipe.",
-      "skills": ["Python", "TensorFlow", "MediaPipe"],
+      "skills": [
+        "Python",
+        "TensorFlow",
+        "MediaPipe"
+      ],
       "link": "https://github.com/yashas-hm/ASL-Gesture-Sensing"
-    },
-    {
-      "name": "Day Night Switch",
-      "description": "A customizable Flutter widget for toggling between day and night themes with smooth transitions.",
-      "skills": ["Flutter", "Animations"],
-      "link": "https://github.com/yashas-hm/day-night-themed-switcher"
-    },
-    {
-      "name": "Glow App Bar",
-      "description": "A Flutter widget showing glowing transitions on index change, fully customizable.",
-      "skills": ["Flutter", "Animations"],
-      "link": "https://pub.dev/packages/glow_bottom_app_bar"
     },
     {
       "name": "Direct Message",
       "description": "Lets users send WhatsApp messages to unsaved numbers instantly.",
-      "skills": ["Flutter"],
+      "skills": [
+        "Flutter"
+      ],
       "link": "https://play.google.com/store/apps/details?id=dev.yashashm.directmessage"
+    },
+    {
+      "name": "AngioNet",
+      "description": "A fully automated, reproducible pipeline for retinal vessel segmentation and vascular feature extraction using deep learning and graph-based analysis.",
+      "skills": [
+        "Python"
+      ],
+      "link": "https://github.com/yashas-hm/AngioNet"
     },
     {
       "name": "AutoWhatsapp",
       "description": "Android app automating WhatsApp replies for enhanced messaging efficiency.",
-      "skills": ["Android", "Background Services", "Firebase"],
+      "skills": [
+        "Android",
+        "Background Services",
+        "Firebase"
+      ],
       "link": "https://github.com/yashas-hm/AutoWhatsapp"
     },
     {
       "name": "Smart Glass",
       "description": "Low-cost efficient AR Smart Glass prototype using Arduino and C++.",
-      "skills": ["IoT", "Arduino", "AR", "C++"],
+      "skills": [
+        "IoT",
+        "Arduino",
+        "AR",
+        "C++"
+      ],
       "link": "https://github.com/yashas-hm/Smart-Glass"
-    },
-    {
-      "name": "Space Invaders",
-      "description": "Re-creation of the classic Space Invaders game using JavaFX.",
-      "skills": ["Java", "JavaFX"],
-      "link": "https://github.com/yashas-hm/Space_Invaders_JavaFX"
-    },
-    {
-      "name": "Recipe Scraper API",
-      "description": "A simple web scraper API for recipes built with Flask.",
-      "skills": ["Python", "Flask"],
-      "link": "https://github.com/yashas-hm/Recipe-Scraper-API"
-    },
-    {
-      "name": "Faculty Exam Assigner",
-      "description": "GUI-based system that randomly assigns faculties to exam slots with constraints on reoccurrence.",
-      "skills": ["Python", "Tkinter", "Pandas"],
-      "link": "https://github.com/yashas-hm/Exam_Supervision_Assigner"
-    },
-    {
-      "name": "MIDI Drums",
-      "description": "A simple, cost-efficient MIDI drum set using Arduino and C++.",
-      "skills": ["IoT", "Arduino", "C++"],
-      "link": "https://github.com/yashas-hm/Arduino-MIDI-Drums"
     }
   ],
   "volunteering": [
+    {
+      "role": "Mentor/Teaching",
+      "organization": "Code The Dream",
+      "duration": "September 2025 - Present"
+    },
     {
       "role": "Backend Developer",
       "organization": "App Team Carolina",
@@ -283,6 +339,10 @@
   ],
   "awards": [
     {
+      "name": "Lucid Programming Competition (1st Place)",
+      "project": "Competitive Coding"
+    },
+    {
       "name": "Smart India Hackathon 2022 (Finals)",
       "project": "Fake News Detection AI Website & API"
     },
@@ -305,6 +365,88 @@
     {
       "name": "Student Startup and Innovation Program 2019 (2nd Place)",
       "note": "Awarded by the Chief Minister of Gujarat"
+    }
+  ],
+  "talks": [
+    {
+      "title": "Build Once, Run Everywhere: Intro to Flutter Dev",
+      "organizer": "GDG Chapel Hill",
+      "link": "https://github.com/yashas-hm/talks/tree/main/intro_to_flutter"
+    },
+    {
+      "title": "Smooth as Butter: Building Beautiful Animations in Flutter",
+      "organizer": "GDG Chapel Hill",
+      "link": "https://github.com/yashas-hm/talks/tree/main/smooth_animations"
+    },
+    {
+      "title": "AI on the Edge: On-Device Machine Learning with Flutter & TensorFlow Lite",
+      "organizer": "GDG Chapel Hill",
+      "link": "https://github.com/yashas-hm/talks/tree/main/ai_on_edge"
+    }
+  ],
+  "open source contributions": [
+    {
+      "repository": "VeryGoodOpenSource/very_good_templates",
+      "issues": [
+        "feat: add platform flags to the template",
+        "feat: Add linux platform support to flame game template"
+      ]
+    },
+    {
+      "repository": "serverpod/serverpod",
+      "issues": [
+        "Add listener to shutdown process",
+        "Improve PasswordHashValidator",
+        "Consolidate Email Account Request exceptions",
+        "Password length validation missing on email authentication password reset/change"
+      ]
+    },
+    {
+      "repository": "supabase/cli",
+      "issues": [
+        "Deno Config Support for IntelliJ IDEA/ Android Studio in supabase init"
+      ]
+    },
+    {
+      "repository": "wger-project/flutter",
+      "issues": [
+        "Replace SharedPreferences with SharedPreferencesAsync",
+        "Replace golden_toolkit package",
+        "Exercise filters not opening",
+        "Bigger images for ingredient details",
+        "Show all exercise images"
+      ]
+    },
+    {
+      "repository": "delwar36/overlapped_carousel",
+      "issues": [
+        "Is it possible to choose whether or not to skew the non-foreground cards?",
+        "Is it possible to obscure (in a progressive way) the cards that are not in the foreground?"
+      ]
+    },
+    {
+      "repository": "foss42/apidash",
+      "issues": [
+        "Adding Tabs at the top of the request pane",
+        "Prompting to save data even when no changes made",
+        "Add a search/filter for collection pane",
+        "Select and delete in groups",
+        "Make Cancel-able HTTP Requests",
+        "Saving state never terminates if persistent files cannot be accessed / modified",
+        "UI update for API Dash Website"
+      ]
+    },
+    {
+      "repository": "unc-csxl/csxl.unc.edu",
+      "issues": [
+        "Improve User Feedback When Reservation Fails Due to Unaccepted Community Agreement"
+      ]
+    },
+    {
+      "repository": "BruckCode/chips_input_autocomplete",
+      "issues": [
+        "Setting 'initialChips' causes error"
+      ]
     }
   ],
   "links": {

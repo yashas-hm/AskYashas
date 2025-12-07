@@ -23,28 +23,56 @@ import os
 import google.generativeai as genai
 from upstash_vector import Index
 
+
 EMBEDDING_MODEL = "models/text-embedding-004"
-RAG_DATA_FILE = "../../rag_data.json"
+RAG_DATA_FILE = os.path.join(os.path.dirname(__file__), "../../rag_data.json")
+ENV_FILE = os.path.join(os.path.dirname(__file__), "../../.env")
+
+def _format_value(value, indent=0) -> str:
+    """Recursively format a value into readable text."""
+    prefix = "  " * indent
+
+    if isinstance(value, str):
+        return value
+    elif isinstance(value, list):
+        if all(isinstance(item, str) for item in value):
+            return ", ".join(value)
+        else:
+            lines = []
+            for item in value:
+                if isinstance(item, dict):
+                    lines.append(f"{prefix}- {_format_dict(item, indent + 1)}")
+                else:
+                    lines.append(f"{prefix}- {item}")
+            return "\n".join(lines)
+    elif isinstance(value, dict):
+        return _format_dict(value, indent)
+    else:
+        return str(value)
+
+
+def _format_dict(d: dict, indent=0) -> str:
+    """Format a dictionary into readable text."""
+    lines = []
+    for key, value in d.items():
+        formatted_key = key.replace("_", " ").title()
+        formatted_value = _format_value(value, indent)
+
+        if "\n" in formatted_value:
+            lines.append(f"{formatted_key}:\n{formatted_value}")
+        else:
+            lines.append(f"{formatted_key}: {formatted_value}")
+
+    return "\n".join(lines)
 
 
 def load_and_chunk_json(file_path: str) -> list[dict]:
     """
-    Load JSON data and create semantic chunks for vector storage.
+    Load JSON data and dynamically create semantic chunks for vector storage.
 
-    Each section/item in the JSON becomes a separate chunk to maintain
-    semantic coherence. This prevents splitting related information
-    across multiple chunks.
-
-    Chunk types created:
-        - about: Single chunk with bio and highlights
-        - skills: Single chunk with all skills categorized
-        - experience: One chunk per job
-        - startup_experience: One chunk per startup role
-        - project: One chunk per project
-        - volunteering: One chunk per volunteer role
-        - publication: One chunk per publication
-        - awards: Single chunk with all awards
-        - links: Single chunk with contact info
+    Automatically handles any JSON structure:
+        - Dict values: Single chunk per key
+        - List values: One chunk per item in the list
 
     Args:
         file_path: Path to the rag_data.json file
@@ -57,103 +85,30 @@ def load_and_chunk_json(file_path: str) -> list[dict]:
 
     chunks = []
 
-    # About section - single chunk
-    if 'about' in data:
-        about = data['about']
-        text = f"""About {about['name']}
-{about['title']}
+    for key, value in data.items():
+        chunk_type = key.replace("_", " ").lower()
 
-{about['summary']}
+        if isinstance(value, list):
+            # Each item in list becomes a separate chunk
+            for item in value:
+                if isinstance(item, dict):
+                    # Try to create a meaningful title
+                    title_keys = ['name', 'title', 'role', 'repository']
+                    title = next((item[k] for k in title_keys if k in item), chunk_type)
+                    text = f"{chunk_type.title()}: {title}\n\n{_format_dict(item)}"
+                else:
+                    text = f"{chunk_type.title()}: {item}"
+                chunks.append({"type": chunk_type, "text": text.strip()})
 
-Key highlights:
-{chr(10).join('- ' + h for h in about.get('highlights', []))}"""
-        chunks.append({"type": "about", "text": text.strip()})
+        elif isinstance(value, dict):
+            # Single chunk for dict
+            text = f"{chunk_type.title()}\n\n{_format_dict(value)}"
+            chunks.append({"type": chunk_type, "text": text.strip()})
 
-    # Skills - single chunk
-    if 'skills' in data:
-        skills = data['skills']
-        text = f"""Skills of Yashas Majmudar
-
-Domains: {', '.join(skills.get('domains', []))}
-
-Programming Languages: {', '.join(skills.get('languages', []))}
-
-Frameworks & Libraries: {', '.join(skills.get('frameworks', []))}
-
-Databases: {', '.join(skills.get('databases', []))}
-
-Tools & Platforms: {', '.join(skills.get('tools', []))}"""
-        chunks.append({"type": "skills", "text": text.strip()})
-
-    # Experience - each job is a chunk
-    for exp in data.get('experience', []):
-        text = f"""Work Experience: {exp['role']} at {exp['company']}
-Duration: {exp['duration']}
-Type: {exp.get('type', 'full-time')}
-
-Achievements:
-{chr(10).join('- ' + h for h in exp.get('highlights', []))}"""
-        chunks.append({"type": "experience", "text": text.strip()})
-
-    # Startup Experience - each is a chunk
-    for exp in data.get('startup_experience', []):
-        text = f"""Startup Experience: {exp['role']} at {exp['company']}
-Duration: {exp['duration']}
-
-Achievements:
-{chr(10).join('- ' + h for h in exp.get('highlights', []))}"""
-        chunks.append({"type": "startup_experience", "text": text.strip()})
-
-    # Projects - each project is a chunk
-    for proj in data.get('projects', []):
-        text = f"""Project: {proj['name']}
-
-{proj['description']}
-
-Technologies: {', '.join(proj.get('skills', []))}
-Link: {proj.get('link', 'N/A')}"""
-        chunks.append({"type": "project", "text": text.strip()})
-
-    # Volunteering - each is a chunk
-    for vol in data.get('volunteering', []):
-        highlights = vol.get('highlights', [])
-        highlights_text = f"\n\nHighlights:\n{chr(10).join('- ' + h for h in highlights)}" if highlights else ""
-        text = f"""Volunteering: {vol['role']} at {vol['organization']}
-Duration: {vol['duration']}{highlights_text}"""
-        chunks.append({"type": "volunteering", "text": text.strip()})
-
-    # Publications - each is a chunk
-    for pub in data.get('publications', []):
-        text = f"""Publication: {pub['title']}
-Published in: {pub['journal']}
-Date: {pub['date']}
-
-Key findings:
-{chr(10).join('- ' + h for h in pub.get('highlights', []))}"""
-        chunks.append({"type": "publication", "text": text.strip()})
-
-    # Awards - all in one chunk (they're short)
-    if 'awards' in data:
-        awards_text = []
-        for award in data['awards']:
-            note = f" - {award['note']}" if 'note' in award else ""
-            project = f" for {award['project']}" if 'project' in award else ""
-            awards_text.append(f"- {award['name']}{project}{note}")
-        text = f"""Awards and Recognition of Yashas Majmudar
-
-{chr(10).join(awards_text)}"""
-        chunks.append({"type": "awards", "text": text.strip()})
-
-    # Links - single chunk
-    if 'links' in data:
-        links = data['links']
-        text = f"""Contact and Links for Yashas Majmudar
-
-Website: {links.get('website', 'N/A')}
-LinkedIn: {links.get('linkedin', 'N/A')}
-GitHub: {links.get('github', 'N/A')}
-Blog: {links.get('blog', 'N/A')}"""
-        chunks.append({"type": "links", "text": text.strip()})
+        else:
+            # Simple value
+            text = f"{chunk_type.title()}: {value}"
+            chunks.append({"type": chunk_type, "text": text.strip()})
 
     # Add ID to each chunk
     for chunk in chunks:
@@ -258,11 +213,40 @@ def main():
     print("\nDone! Your RAG data is now in Upstash Vector.")
 
 
+def test_chunks():
+    """
+    Test function to display all chunks converted from JSON.
+    Run with: python api/utils/upload_vectorstore_data.py --test
+    """
+    print("=" * 60)
+    print("TESTING: JSON to Chunks Conversion")
+    print("=" * 60)
+
+    chunks = load_and_chunk_json(RAG_DATA_FILE)
+
+    print(f"\nTotal chunks created: {len(chunks)}\n")
+
+    for i, chunk in enumerate(chunks, 1):
+        print(f"{'─' * 60}")
+        print(f"CHUNK {i} | Type: {chunk['type']} | ID: {chunk['id'][:8]}...")
+        print(f"{'─' * 60}")
+        print(chunk['text'])
+        print()
+
+    print("=" * 60)
+    print(f"Summary: {len(chunks)} chunks ready for embedding")
+    print("=" * 60)
+
+
 if __name__ == "__main__":
     import sys
 
-    if "--workflow" not in sys.argv:
+    if "--test" in sys.argv:
+        test_chunks()
+    elif "--workflow" not in sys.argv:
         from dotenv import load_dotenv
 
-        load_dotenv('../../.env')
-    main()
+        load_dotenv(ENV_FILE)
+        main()
+    else:
+        main()
