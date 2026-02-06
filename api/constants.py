@@ -2,7 +2,7 @@ LLM_MODEL_FALLBACK = 'gemma-3-27b-it'
 
 LLM_MODEL = 'gemini-2.5-flash-lite'
 
-EMBEDDING_MODEL = "models/text-embedding-004"
+EMBEDDING_MODEL = "models/gemini-embedding-001"
 
 AI_MSG_KEY = 'AI'
 
