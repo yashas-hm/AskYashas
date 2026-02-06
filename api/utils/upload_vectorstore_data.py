@@ -23,8 +23,7 @@ import os
 import google.generativeai as genai
 from upstash_vector import Index
 
-from api.constants import EMBEDDING_MODEL
-
+EMBEDDING_MODEL = 'models/gemini-embedding-001'
 RAG_DATA_FILE = os.path.join(os.path.dirname(__file__), "../../rag_data.json")
 ENV_FILE = os.path.join(os.path.dirname(__file__), "../../.env")
 
