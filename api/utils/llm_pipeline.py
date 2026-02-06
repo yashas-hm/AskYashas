@@ -133,7 +133,8 @@ class LLMPipeline:
         result = genai.embed_content(
             model=EMBEDDING_MODEL,
             content=query,
-            task_type="retrieval_query"
+            task_type="retrieval_query",
+            output_dimensionality=768
         )
         return result['embedding']
 

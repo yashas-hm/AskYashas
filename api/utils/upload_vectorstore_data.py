@@ -23,8 +23,8 @@ import os
 import google.generativeai as genai
 from upstash_vector import Index
 
+from api.constants import EMBEDDING_MODEL
 
-EMBEDDING_MODEL = "models/text-embedding-004"
 RAG_DATA_FILE = os.path.join(os.path.dirname(__file__), "../../rag_data.json")
 ENV_FILE = os.path.join(os.path.dirname(__file__), "../../.env")
 
@@ -135,7 +135,8 @@ def get_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
         result = genai.embed_content(
             model=EMBEDDING_MODEL,
             content=text,
-            task_type="retrieval_document"
+            task_type="retrieval_document",
+            output_dimensionality=768
         )
         embeddings.append(result['embedding'])
 
