@@ -2,7 +2,6 @@
 *.json
 venv/
 __pycache__/
-.git/
 .github/
 assets/
 *.pyc
