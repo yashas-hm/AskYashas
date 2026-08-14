@@ -1,4 +1,10 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "**": false
+    }
+  },
   "ignoreCommand": "git diff --quiet HEAD^ HEAD -- app.py api requirements.txt vercel.json",
   "buildCommand": "pip install -r requirements.txt",
   "builds": [
