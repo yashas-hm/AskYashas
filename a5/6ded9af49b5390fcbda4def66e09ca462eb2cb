@@ -1,0 +1,24 @@
+CODEOWNERS
+  h_489c0496f9f57d 1
+.github/dependabot.yml
+  h_489c0496f9f57d 1-21
+.githooks/pre-commit
+  h_489c0496f9f57d 1-15
+.github/workflows/check_requirements.yml
+  h_489c0496f9f57d 1-35
+.github/workflows/smoke_test.yml
+  h_489c0496f9f57d 1-36
+vercel.json
+  h_489c0496f9f57d 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "a56ded9af49b5390fcbda4def66e09ca462eb2cb",
+  "prompts": {},
+  "humans": {
+    "h_489c0496f9f57d": {
+      "author": "Yashas H Majmudar <yashashm.dev@gmail.com>"
+    }
+  }
+}
