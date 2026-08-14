@@ -1,0 +1,36 @@
+name: Smoke Test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  boot-and-healthcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Start app
+        run: |
+          uv run uvicorn app:app --port 3000 &
+          echo $! > server.pid
+
+      - name: Wait for app and hit healthcheck
+        run: |
+          curl --fail --silent --show-error \
+            --retry 10 --retry-delay 1 --retry-connrefused \
+            http://localhost:3000/api/healthCheck
+
+      - name: Stop app
+        if: always()
+        run: kill "$(cat server.pid)" 2>/dev/null || true
