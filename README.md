@@ -257,6 +257,8 @@ Add these secrets to your GitHub repo:
 
 The GitHub Action (`.github/workflows/check_requirements.yml`) verifies `requirements.txt` matches `uv.lock` on every PR/push touching `pyproject.toml`, `uv.lock`, or `requirements.txt`, and fails the build if they've drifted apart.
 
+Dependabot PRs can't run the local pre-commit hook, so `.github/workflows/sync_requirements_dependabot.yml` regenerates `requirements.txt` and pushes it straight onto the Dependabot PR branch whenever `pyproject.toml`/`uv.lock` change — the `check_requirements.yml` check then passes on that updated commit automatically.
+
 ---
 
 ## Preview

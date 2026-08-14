@@ -1,0 +1,37 @@
+name: Sync requirements.txt on Dependabot PRs
+
+on:
+  pull_request_target:
+    paths:
+      - pyproject.toml
+      - uv.lock
+
+permissions:
+  contents: write
+
+jobs:
+  sync-requirements:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - uses: astral-sh/setup-uv@v3
+
+      - name: Regenerate requirements.txt
+        run: uv export --no-hashes --no-dev -o requirements.txt
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet requirements.txt; then
+            echo "requirements.txt already in sync"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add requirements.txt
+          git commit -m "chore: sync requirements.txt with uv.lock"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
