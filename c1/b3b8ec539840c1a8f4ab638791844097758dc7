@@ -1,0 +1,18 @@
+.github/workflows/check_requirements.yml
+  h_489c0496f9f57d 19
+.github/workflows/sync_requirements_dependabot.yml
+  h_489c0496f9f57d 1-37
+README.md
+  h_489c0496f9f57d 260-261
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "c1b3b8ec539840c1a8f4ab638791844097758dc7",
+  "prompts": {},
+  "humans": {
+    "h_489c0496f9f57d": {
+      "author": "Yashas H Majmudar <yashashm.dev@gmail.com>"
+    }
+  }
+}
