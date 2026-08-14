@@ -15,16 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v3
         with:
-          python-version: '3.13'
+          enable-cache: true
 
       - name: Install Dependencies
-        run: pip install google-generativeai upstash-vector
+        run: uv sync --no-dev
 
       - name: Upload to Upstash Vector
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
           UPSTASH_VECTOR_REST_URL: ${{ secrets.UPSTASH_VECTOR_REST_URL }}
           UPSTASH_VECTOR_REST_TOKEN: ${{ secrets.UPSTASH_VECTOR_REST_TOKEN }}
-        run: python api/utils/upload_vectorstore_data.py --workflow
+        run: uv run python api/utils/upload_vectorstore_data.py --workflow

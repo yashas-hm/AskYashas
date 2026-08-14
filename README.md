@@ -183,17 +183,35 @@ BYPASS_KEY=optional-bypass-key
 ### 5. Upload Data to Upstash
 
 ```bash
-pip install -r requirements.txt
-python api/utils/upload_vectorstore_data.py
+uv sync
+uv run python api/utils/upload_vectorstore_data.py
 ```
 
 ### 6. Run Locally
 
 ```bash
-uvicorn app:app --reload --port 3000
+uv run uvicorn app:app --reload --port 3000
 ```
 
-### 7. Test
+### 7. Dependency Management
+
+Dependencies are managed with [`uv`](https://docs.astral.sh/uv/) via `pyproject.toml`/`uv.lock`. `requirements.txt` is a generated file consumed only by Vercel's build (`pip install -r requirements.txt`) — never edit it by hand.
+
+```bash
+uv add <package>              # add a dependency
+uv remove <package>           # remove a dependency
+uv export --no-hashes --no-dev -o requirements.txt   # regenerate requirements.txt
+```
+
+Run this once per clone to auto-regenerate `requirements.txt` on commit whenever `pyproject.toml`/`uv.lock` change:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+This is a local convenience only — it isn't installed automatically for forks/clones, so CI (`.github/workflows/check_requirements.yml`) independently verifies `requirements.txt` is in sync on every PR and fails the build if it's stale.
+
+### 8. Test
 
 ```bash
 curl -X POST "http://localhost:3000/api/prompt?bypass_key=your-key" \
@@ -201,7 +219,7 @@ curl -X POST "http://localhost:3000/api/prompt?bypass_key=your-key" \
   -d '{"query": "Who are you?", "history": []}'
 ```
 
-### 8. Deploy to Vercel
+### 9. Deploy to Vercel
 
 ```bash
 npm i -g vercel
@@ -210,7 +228,7 @@ vercel
 
 Add environment variables in Vercel dashboard.
 
-### 9. Update Security
+### 10. Update Security
 
 Edit `api/utils/middleware.py` to add your allowed origins:
 
@@ -236,6 +254,8 @@ Add these secrets to your GitHub repo:
 - `API_TOKEN`
 - `UPSTASH_VECTOR_REST_URL`
 - `UPSTASH_VECTOR_REST_TOKEN`
+
+The GitHub Action (`.github/workflows/check_requirements.yml`) verifies `requirements.txt` matches `uv.lock` on every PR/push touching `pyproject.toml`, `uv.lock`, or `requirements.txt`, and fails the build if they've drifted apart.
 
 ---
 
