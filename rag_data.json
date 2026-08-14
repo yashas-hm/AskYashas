@@ -1,8 +1,9 @@
 {
   "about": {
     "name": "Yashas Majmudar",
-    "title": "AI-Native Full Stack Developer",
+    "title": "AI Native Full-Stack Engineer",
     "summary": "AI-Native Full Stack Developer with 3+ years of experience building intelligent, scalable applications. Specializes in integrating production-grade LLMs (LangChain, RAG, Gemini) into real-world systems, reducing data retrieval latency by 40%. Combines deep expertise in Python and Flutter with modern AI tooling to deliver end-to-end solutions from mobile frontends to AI-powered backends. Proven track record scaling applications to 10k+ users while maintaining 99.8% uptime.",
+    "tagline": "Fusing the discipline of traditional systems engineering with the adaptability of modern AI. I build polished, production-grade solutions where reliable infrastructure supports cutting-edge intelligent capabilities.",
     "highlights": [
       "Production-grade LLM integration with LangChain, RAG, and Gemini",
       "Serverless AI systems with Vector Databases and automated CI/CD",
@@ -46,71 +47,98 @@
       "JavaScript",
       "TypeScript",
       "Bash",
+      "Rust",
       "C#",
-      "C/C++"
+      "C/C++",
+      "Java"
     ],
     "ai_ml": [
       "LangChain",
       "LangGraph",
-      "LLMs",
-      "Gemini",
       "Ollama",
-      "Vector Databases",
-      "RAG",
-      "TensorFlow",
+      "LLMs",
+      "Vertex AI",
+      "HuggingFace",
       "OpenCV",
-      "MediaPipe",
-      "HuggingFace"
+      "TensorFlow"
     ],
-    "frameworks": [
+    "frontend": [
       "Flutter",
+      "Android",
+      "iOS",
+      "HTML",
+      "CSS",
+      "React"
+    ],
+    "backend": [
       "FastAPI",
       "Node.js",
       "Express.js",
-      ".NET",
-      "RESTful APIs"
+      "NGINX",
+      "GraphQL",
+      ".NET"
     ],
     "databases": [
-      "PostgreSQL",
       "MySQL",
-      "MongoDB",
+      "PostgreSQL",
+      "MongoDb",
+      "Vector DB",
       "Firebase",
-      "Supabase",
-      "ChromaDB",
-      "Upstash VectorDB"
+      "Supabase"
     ],
-    "tools": [
+    "devops": [
       "Git",
       "Docker",
       "Kubernetes",
-      "GitHub Actions",
-      "AWS",
+      "GitHub Actions"
+    ],
+    "cloud_tools": [
+      "GitHub",
+      "Gitlab",
       "GCP",
+      "AWS",
       "Jira",
-      "CI/CD"
+      "Slack"
+    ],
+    "iot": [
+      "Arduino",
+      "RaspberryPi",
+      "ESP32"
     ],
     "core_stack": [
       "Flutter",
+      "TypeScript",
       "Python",
       "LangChain",
       "FastAPI",
       "Node.js",
-      "Vector Databases",
+      "Git",
       "Docker",
-      "Git"
+      "Vector DB"
     ]
   },
   "experience": [
     {
       "role": "Software Engineer",
+      "company": "Nest Veterinary",
+      "duration": "July 2026 - Present",
+      "type": "full-time",
+      "highlights": [
+        "Built a client-facing Flutter app used by 1K+ users, streamlining core workflows, by shipping the full client experience end-to-end",
+        "Eliminated stored secrets for identity provider integration, achieving fully automated credential rotation, by building a key rotation job with Workload Identity Federation and GCP Secret Manager (5-month rotation cycle)",
+        "Reduced CI pipeline complexity and maintenance overhead across 15+ CI jobs by refactoring shared workflows into reusable configs"
+      ]
+    },
+    {
+      "role": "Software Engineer",
       "company": "Albiware LLC",
-      "duration": "May 2025 - Present",
+      "duration": "May 2025 - May 2026",
       "type": "part-time",
       "highlights": [
-        "Spearheaded architectural migration of legacy application to modern Flutter codebase while engineering scalable .NET endpoints",
-        "Directed technical evaluation and integration of 3rd-party SDKs, reducing integration overhead by 20%",
-        "Diagnosed and resolved complex race conditions across Flutter and .NET stack, slashing crash rates by 40%",
-        "Designed custom UI components and backend logic, contributing to 20% increase in user engagement"
+        "Migrated a legacy mobile application to Flutter, while restructuring backend APIs in .NET, improving cross-platform stability and maintainability",
+        "Reduced mobile application crash rate from 3% to 1.5% by identifying and fixing race conditions between asynchronous Flutter and backend API responses",
+        "Designed and shipped multiple end-to-end product features across frontend and backend, contributing to a 22% increase in weekly active user engagement measured via product analytics",
+        "Evaluated and integrated third-party SDKs by performing trade-off analysis across cost, reliability and performance, significantly reducing integration rework and downstream maintenance overhead"
       ]
     },
     {
@@ -119,9 +147,9 @@
       "duration": "October 2024 - January 2025",
       "type": "part-time",
       "highlights": [
-        "Engineered Flutter-based educational escape room game improving diagnostic knowledge retention by 40%",
-        "Introduced analytics to track user performance, boosting training effectiveness by 25%",
-        "Improved engagement by 30% and learning retention by 25% based on metrics from 1,000+ students across UNC, UIC, and Monash University"
+        "Built an educational Flutter game, increasing diagnostic knowledge retention by 40%",
+        "Added analytics to track performance, boosting training effectiveness by 25%",
+        "Improved engagement by 30% and learning retention by 25% using gameplay metrics from 1,000+ students across UNC, UIC, and Monash"
       ]
     },
     {
@@ -130,187 +158,375 @@
       "duration": "June 2023 - July 2024",
       "type": "full-time",
       "highlights": [
-        "Developed cross-platform mobile applications using Flutter, increasing client base by 30% in six months",
-        "Engineered AI-powered dental analysis framework using computer vision for automated diagnostics",
-        "Designed and implemented backend APIs and SQL databases with Node.js and Express.js, improving efficiency by 40% and maintaining 99.8% uptime",
-        "Built CMS and integrated payment interfaces, reducing update time by 50% and increasing online sales by 15%",
-        "Achieved promotion within 8 months through demonstrated technical leadership and measurable impact"
+        "Developed cross-platform mobile applications using Flutter, contributing to a 30% increase in active client usage over six months",
+        "Integrated pretrained CNN models into a clinical application to enable automated detection of dental features from images, focusing on inference optimization and product integration",
+        "Designed and implemented backend REST APIs using Node.js, Express.js, and PostgreSQL, improving average request processing time by 47% and maintaining 99.8% uptime",
+        "Built internal CMS tools and payment integrations, reducing content update turnaround time by 50% and increasing online transactions by ~15%",
+        "Promoted within 8 months based on consistent delivery and ownership across mobile and backend features"
       ]
     },
     {
-      "role": "Software Engineer (Freelance)",
+      "role": "Software Engineer",
       "company": "Individual Contributor",
-      "duration": "August 2019 - May 2023",
+      "duration": "May 2020 - May 2023",
       "type": "freelance",
       "highlights": [
-        "Delivered Flutter apps for 7 companies, achieving 10K+ downloads and 95% client satisfaction",
-        "Integrated Firebase and Cloud services, speeding up data retrieval by 40%",
-        "Deployed ML models and games, increasing user retention by 25%"
+        "Delivered MVP and full-stack mobile solutions for over 7 startups across EdTech and HealthTech spaces",
+        "Optimized legacy codebases for 2 clients, reducing data retrieval times by 43% via improved indexing and query optimization",
+        "Spearheaded greenfield Flutter/Firebase apps for 3 clients, handling auth, payments, and real-time databases for 10K+ combined users",
+        "Operated in high-velocity environments, shipping production features on bi-weekly sprint cycles across Flutter, Node.js and Python based systems"
       ]
     }
   ],
-  "startup_experience": [
+  "internships": [
     {
       "role": "Software Engineer",
       "company": "Camp Yellow",
-      "duration": "April 2023 - May 2023",
+      "duration": "April 2023",
+      "type": "internship",
       "highlights": [
-        "Implemented parallel downloading and file compression, reducing download time by 50%",
-        "Collaborated with UI/UX designers, leading to 30% increase in user engagement",
-        "Built secure APIs for authentication serving 1000+ daily active users"
+        "Engineered parallel download & compression, cutting download time by 50%",
+        "Updated gameplay storyboards from Excel sheets, reducing update time by 50%",
+        "Collaborated with UI/UX designers, increasing engagement by 30%",
+        "Implemented secure APIs for authentication and data transfer",
+        "Added audio interface for seamless background music during gameplay"
       ]
     },
     {
       "role": "Flutter Game Developer",
       "company": "Grahnumb",
       "duration": "February 2023 - March 2023",
+      "type": "internship",
       "highlights": [
-        "Built Flutter Flame games, increasing engagement by 20% with immersive visuals",
-        "Implemented secure auth and data APIs, maintaining <3% error rate",
+        "Built Flutter Flame games, increasing engagement by 20% with immersive visuals and gameplay",
+        "Implemented secure auth and data APIs, maintaining <3% error rate and strong user trust",
+        "Optimized performance, reducing load times by 30% for smoother gameplay",
         "Developed three Flutter games, reducing user churn by 20%"
       ]
     },
     {
       "role": "Flutter Engineer",
-      "company": "EcoConsumer Solutions Pvt. Ltd.",
+      "company": "EcoConsumers Solutions Pvt. Ltd.",
       "duration": "June 2022 - September 2022",
+      "type": "internship",
       "highlights": [
-        "Built Firebase-backed B2C app, increasing user engagement by 40%",
-        "Applied Provider and Riverpod for state management, cutting dev time by 20%",
-        "Implemented Hive caching, boosting performance by 30%"
+        "Built a Firebase-backed B2C app, increasing user engagement by 40%",
+        "Applied Provider & Riverpod for state management, cutting dev time by 20%",
+        "Implemented Hive caching, boosting performance by 30% and reducing server calls by 50%"
+      ]
+    },
+    {
+      "role": "Software Developer Intern",
+      "company": "Raahi Mobi Pvt. Ltd.",
+      "duration": "May 2021 - June 2021",
+      "type": "internship",
+      "highlights": [
+        "Integrated caching mechanism, reducing asset loading time by 20% for enhanced performance",
+        "Developed and implemented RESTful search and create API, reducing development time by 30%"
+      ]
+    },
+    {
+      "role": "Mobile Developer",
+      "company": "Surjal Services Pvt. Ltd.",
+      "duration": "January 2021 - February 2021",
+      "type": "internship",
+      "highlights": [
+        "Developed a WhatsApp auto-responder app with a 95% response rate, boosting user engagement",
+        "Optimized performance and reduced battery consumption by 30% through Android native services integration"
+      ]
+    },
+    {
+      "role": "Android Developer",
+      "company": "99 Yellow",
+      "duration": "August 2020 - December 2020",
+      "type": "internship",
+      "highlights": [
+        "Implemented local storage with Room Database, reducing data retrieval time by 30%",
+        "Conducted thorough unit tests using JUnit, achieving a test coverage of 95%"
+      ]
+    },
+    {
+      "role": "Android Developer Intern",
+      "company": "Shree Mahesh Heritage",
+      "duration": "June 2020 - July 2020",
+      "type": "internship",
+      "highlights": [
+        "Integrated offline storage, enabling browsing history access without internet, enhancing user convenience",
+        "Optimized performance with threading techniques, reducing loading time by 50%"
       ]
     }
   ],
   "projects": [
     {
-      "name": "AskYashas",
-      "description": "A serverless RAG chatbot using FastAPI, LangChain, and Gemini, enabling context-aware Q&A with a self-contained vector store using Upstash VectorDB to reduce latency by 40%. Automated vectorstore generation and deployment with GitHub Actions for seamless CI/CD, reducing deployment time by 60%.",
-      "category": "AI/ML",
-      "skills": ["Python", "LangChain", "FastAPI", "Gemini", "RAG", "Vector Database", "GitHub Actions"],
-      "link": "https://github.com/yashas-hm/AskYashas",
-      "demo": "https://yashashm.dev/chat"
+      "name": "Dashability",
+      "description": "Runtime Observability Layer for Flutter Apps. Connects to running Flutter apps via VM Service, monitors performance and errors in real-time, detects anomalies, and exposes observation and action tools via MCP.",
+      "category": "Flutter Package",
+      "skills": ["Flutter", "LLMs"],
+      "link": "https://github.com/yashas-hm/dashability",
+      "pub": "https://pub.dev/packages/dashability"
+    },
+    {
+      "name": "Media Metadata Plus",
+      "description": "Cross-platform Flutter plugin for reading media metadata; EXIF, GPS, camera info, and video duration from images, RAW files, and videos using pure Rust via flutter_rust_bridge.",
+      "category": "Flutter Package",
+      "skills": ["Flutter", "Rust"],
+      "link": "https://github.com/yashas-hm/media-metadata-plus",
+      "pub": "https://pub.dev/packages/media_metadata_plus"
+    },
+    {
+      "name": "Echo Frame",
+      "description": "Offline photo organizer with editing capabilities, improving personal media management efficiency by 70%.",
+      "category": "In Progress",
+      "skills": ["Flutter", "TensorFlow", "OpenCV"],
+      "link": "https://github.com/yashas-hm/echo-frame"
+    },
+    {
+      "name": "Country Calling Code Kit",
+      "description": "A sleek, cross-platform Flutter package for picking country flags, names, and international dialing codes with a customizable UI and smart default detection.",
+      "category": "Flutter Package",
+      "skills": ["Flutter"],
+      "link": "https://github.com/yashas-hm/country-calling-code-kit",
+      "pub": "https://pub.dev/packages/country_calling_code_kit"
+    },
+    {
+      "name": "Day Night Switcher",
+      "description": "A responsive Flutter theme switcher widget with fluid day/night animations, adaptive color syncing, and easy integration across apps.",
+      "category": "Flutter Package",
+      "skills": ["Flutter"],
+      "link": "https://github.com/yashas-hm/day-night-themed-switcher",
+      "pub": "https://pub.dev/packages/day_night_themed_switcher"
+    },
+    {
+      "name": "Lava Lamp Effect",
+      "description": "A visually engaging Flutter animation package delivering fluid, customizable lava-lamp motion effects for modern UIs.",
+      "category": "Flutter Package",
+      "skills": ["Flutter"],
+      "link": "https://github.com/yashas-hm/lava-lamp-effect",
+      "pub": "https://pub.dev/packages/lava_lamp_effect"
     },
     {
       "name": "AngioNET",
       "description": "One-click, reproducible U-Net pipeline for retinal vessel segmentation, achieving Dice ~0.86, accuracy ~98%, sensitivity ~91%, and specificity ~99% on clinical angiographic images.",
       "category": "AI/ML",
-      "skills": ["Python", "Deep Learning", "Medical Imaging"],
+      "skills": ["Git", "Python"],
       "link": "https://github.com/yashas-hm/AngioNet"
     },
     {
       "name": "Illness Lab",
-      "description": "A Flutter web application escape room centered on healthcare education. Architected a custom game update loop that enhanced user control and reduced system latency by 40%. Increased user engagement by 30% and educational retention by 25% based on metrics from 1,000+ students at UNC, UIC, and Monash University.",
+      "description": "A virtual escape room for medical residents, improving diagnostic reasoning and engagement through scenario-driven challenges.",
       "category": "Production",
-      "skills": ["Flutter", "Game Development"],
-      "link": "https://yashas-hm-unc.github.io/illness-lab-website/"
+      "skills": ["Flutter"],
+      "demo": "https://yashas-hm-unc.github.io/illness-lab-website/"
     },
     {
-      "name": "Spotter",
-      "description": "A geospatial social platform with refined spot search algorithms using custom indexing and caching, cutting search time by 40%. Devised custom compression algorithms reducing image storage by 60%. Deployed secure Firebase database with custom authentication rules, slashing unauthorized access attempts by 30%.",
+      "name": "AskYashas",
+      "description": "A serverless RAG chatbot using FastAPI, LangChain, and vector search to deliver intelligent, context-aware answers from custom data.",
+      "category": "AI/ML",
+      "skills": ["Python", "LangChain", "LLMs", "GitHub Actions"],
+      "link": "https://github.com/yashas-hm/AskYashas",
+      "demo": "https://yashashm.dev/chat"
+    },
+    {
+      "name": "Glow Bottom App Bar",
+      "description": "A customizable Flutter bottom navigation bar with a smooth glowing transition effect and customizable appearance for modern UI navigation.",
+      "category": "Flutter Package",
+      "skills": ["Flutter"],
+      "link": "https://github.com/yashas-hm/glow_bottom_app_bar",
+      "pub": "https://pub.dev/packages/glow_bottom_app_bar"
+    },
+    {
+      "name": "Henchman",
+      "description": "CLI developer tool automating project scaffolding, Git tasks, and environment management to boost productivity.",
       "category": "Production",
-      "skills": ["Flutter", "Firebase", "Maps SDK", "GCP"],
-      "link": "https://github.com/spotter-find-your-spot/spotter"
+      "skills": ["JavaScript", "Bash"],
+      "link": "https://github.com/yashas-hm/henchman",
+      "npm": "https://www.npmjs.com/package/henchman-cli"
     },
     {
       "name": "MedTourism Co.",
       "description": "A full-stack medical tourism platform with clinic discovery, community forums, health tracking, and live chat to improve user engagement and decision-making.",
       "category": "Production",
-      "skills": ["Flutter", "Node.js", "TypeScript", "Python", "MySQL", "Docker"],
-      "link": "https://github.com/yashas-hm/just-documentation/blob/main/MedTourismCo/MedTourismCo.md"
+      "skills": ["Flutter", "TypeScript", "Python", "Docker", "MySQL", "Node.js", "Express.js"],
+      "documentation": "https://github.com/yashas-hm/just-documentation/blob/main/MedTourismCo/MedTourismCo.md"
     },
     {
-      "name": "DentaVacation",
-      "description": "A Flutter dental-care app with quizzes, videos, chat, habit tracker, cost calculator, and Docker-based forum. Achieved 40% increase in user engagement, 30% retention, and 20% customer satisfaction improvement.",
+      "name": "PRATVI",
+      "description": "A Flutter app for wedding logistics management, streamlining planning and guest coordination for 100+ users.",
       "category": "Production",
-      "skills": ["Flutter", "Node.js", "TypeScript", "Docker", "MySQL", "GCP"],
-      "link": "https://www.app.dentavacation.com"
-    },
-    {
-      "name": "Henchman",
-      "description": "An all-in-one interactive CLI tool for creating, setting up, and managing development projects. Automates project scaffolding, Git tasks, and environment management.",
-      "category": "Production",
-      "skills": ["JavaScript", "Bash", "CLI"],
-      "link": "https://github.com/yashas-hm/henchman",
-      "npm": "https://www.npmjs.com/package/henchman-cli"
-    },
-    {
-      "name": "ASL Gesture Detection",
-      "description": "Machine Learning model that converts American Sign Language gestures to text with 90% accuracy using real-time video feed with TensorFlow and MediaPipe.",
-      "category": "AI/ML",
-      "skills": ["Python", "TensorFlow", "MediaPipe", "OpenCV"],
-      "link": "https://github.com/yashas-hm/ASL-Gesture-Sensing"
+      "skills": ["Flutter", "Firebase", "GCP"],
+      "link": "https://github.com/yashas-hm/PRATVI"
     },
     {
       "name": "Direct Message",
-      "description": "A Flutter utility app enabling one-tap WhatsApp messaging without saving contacts, with a sleek minimalist design.",
+      "description": "A Flutter utility app that cuts out contact saving and enables one-tap WhatsApp messaging, boosting messaging efficiency with a sleek minimalist design.",
       "category": "Production",
       "skills": ["Flutter"],
-      "link": "https://play.google.com/store/apps/details?id=dev.yashashm.directmessage"
+      "link": "https://github.com/yashas-hm/direct-message",
+      "demo": "https://directmessage.yashashm.dev"
+    },
+    {
+      "name": "DentaVacation",
+      "description": "A Flutter dental-care app, increasing engagement by 40%, retention by 30%, and customer satisfaction by 20% via quizzes, habit tracking, and real-time chat.",
+      "category": "Production",
+      "skills": ["Flutter", "GCP", "TypeScript", "Docker", "MySQL", "Node.js", "Express.js"],
+      "documentation": "https://github.com/yashas-hm/just-documentation/blob/main/DentaVacation/DentaVacation.md",
+      "demo": "https://www.app.dentavacation.com"
+    },
+    {
+      "name": "ASL Gesture Sensing",
+      "description": "ML model to translate ASL hand gestures to text with 90% accuracy using real-time video feed.",
+      "category": "AI/ML",
+      "skills": ["Python", "MediaPipe", "OpenCV"],
+      "link": "https://github.com/yashas-hm/ASL-Gesture-Sensing"
+    },
+    {
+      "name": "Geospatial Social Platform",
+      "description": "A location-based discovery app using Flutter and Firebase, boosting engagement by 40%, reducing storage usage by 50%, and improving data retrieval speed by 25%.",
+      "category": "Production",
+      "skills": ["Flutter", "Firebase", "GCP", "Python"],
+      "documentation": "https://github.com/spotter-find-your-spot/spotter"
     },
     {
       "name": "Smart Glass",
-      "description": "Low-cost efficient AR Smart Glass prototype using Arduino and C++ with IoT capabilities.",
-      "category": "IoT",
-      "skills": ["IoT", "Arduino", "AR", "C++"],
+      "description": "Affordable smart glass device with IoT capabilities, supporting remote notifications for accessibility.",
+      "category": "Project",
+      "skills": ["C/C++", "Arduino", "AR"],
       "link": "https://github.com/yashas-hm/Smart-Glass"
+    },
+    {
+      "name": "Arduino MIDI Drums",
+      "description": "Electronic drum kit with Arduino and MIDI, achieving sub-10ms response latency for real-time performance.",
+      "category": "Project",
+      "skills": ["Arduino", "C/C++"],
+      "link": "https://github.com/yashas-hm/Arduino-MIDI-Drums"
     }
   ],
-  "flutter_packages": [
+  "open_source_contributions": [
     {
-      "name": "Glow Bottom App Bar",
-      "description": "A customizable Flutter bottom navigation bar with smooth glowing transition effect.",
-      "link": "https://pub.dev/packages/glow_bottom_app_bar"
+      "organization": "Flutter",
+      "repository": "flutter/flutter",
+      "url": "https://github.com/flutter/flutter",
+      "contributions": [
+        "[flutter_tools] Use DeviceHub.app for iOS simulator path on Xcode 27+ (PR merged) - resolved \"flutter emulators\" not finding the iOS simulator with Xcode 27"
+      ]
     },
     {
-      "name": "Country Calling Code Kit",
-      "description": "A sleek, cross-platform Flutter package for picking country flags, names, and international dialing codes.",
-      "link": "https://pub.dev/packages/country_calling_code_kit"
+      "organization": "Flutter",
+      "repository": "flutter/packages",
+      "url": "https://github.com/flutter/packages",
+      "contributions": [
+        "[image_picker] Handle limit: 1 in pickMultiImage and pickMultipleMedia gracefully (PR merged) - resolved image_picker erroring when a limit of 1 was passed to pickMultiImage"
+      ]
     },
     {
-      "name": "Day Night Switcher",
-      "description": "A responsive Flutter theme switcher widget with fluid day/night animations.",
-      "link": "https://pub.dev/packages/day_night_themed_switcher"
+      "organization": "Very Good Ventures",
+      "repository": "VeryGoodOpenSource/very_good_templates",
+      "url": "https://github.com/VeryGoodOpenSource/very_good_templates",
+      "contributions": [
+        "feat(very_good_flame): add platform options (PR merged) - added platform flags to the Very Good Flame template",
+        "feat(very_good_flame_game): add linux platform option (PR merged) - added Linux platform support to the Flame game template"
+      ]
     },
     {
-      "name": "Lava Lamp Effect",
-      "description": "A visually engaging Flutter animation package delivering fluid, customizable lava-lamp motion effects.",
-      "link": "https://pub.dev/packages/lava_lamp_effect"
+      "organization": "Serverpod",
+      "repository": "serverpod/serverpod",
+      "url": "https://github.com/serverpod/serverpod",
+      "contributions": [
+        "feat: Added ShutdownListenerManager for Graceful Server Shutdown Handling (PR merged)",
+        "feat: Custom object return for password hash validator and named parameters (PR merged) - improved PasswordHashValidator",
+        "feat: Consolidate Password reset requests exceptions and account creation exceptions (PR merged)",
+        "feat: Password length validation in reset and change password (PR merged)"
+      ]
+    },
+    {
+      "organization": "Supabase CLI",
+      "repository": "supabase/cli",
+      "url": "https://github.com/supabase/cli",
+      "contributions": [
+        "feat: added initialisation flag for IntelliJ Deno Config (PR merged) - added Deno config support for IntelliJ IDEA/Android Studio in `supabase init`"
+      ]
+    },
+    {
+      "organization": "Wger Project",
+      "repository": "wger-project/flutter",
+      "url": "https://github.com/wger-project/flutter",
+      "contributions": [
+        "SharedPreferences to SharedPreferencesAsync Migration (PR merged)",
+        "golden_toolkit to flutter_test Migration (PR merged)",
+        "Exercise filters bug fix: Issue #743 (PR merged) - fixed exercise filters not opening",
+        "Nutrition dialog image fix: Issue #724 (PR merged) - fixed small ingredient detail images",
+        "Carousel for Exercise Details Images (PR merged) - added ability to show all exercise images"
+      ]
+    },
+    {
+      "organization": "Overlapped Carousel",
+      "repository": "delwar36/overlapped_carousel",
+      "url": "https://github.com/delwar36/overlapped_carousel",
+      "contributions": [
+        "Solved Issue #2: option to skew non-foreground cards (PR merged)",
+        "Solved Issue #3: progressive obscuring of cards not in the foreground (PR merged)"
+      ]
+    },
+    {
+      "organization": "APIDash",
+      "repository": "foss42/apidash",
+      "url": "https://github.com/foss42/apidash",
+      "contributions": [
+        "Feat tab view (PR closed) - proposed tabs at the top of the request pane",
+        "Fix prompt only when changes made (PR merged) - fixed prompting to save data even with no changes",
+        "Feat search requests (PR closed) - proposed a search/filter for the collection pane",
+        "Feat delete multiple requests (PR closed) - added select-and-delete in groups",
+        "Make Cancel-able HTTP Requests (PR closed)",
+        "Fix hive persistence issue (PR closed) - fixed saving state never terminating when persistent files could not be accessed or modified",
+        "Reported UI update for API Dash Website (issue closed, no PR)"
+      ]
+    },
+    {
+      "organization": "CSXL.UNC.EDU",
+      "repository": "unc-csxl/csxl.unc.edu",
+      "url": "https://github.com/unc-csxl/csxl.unc.edu",
+      "contributions": [
+        "Add User Agreement Check Before Reservations (PR closed) - addressed poor user feedback when reservations failed due to an unaccepted community agreement"
+      ]
+    },
+    {
+      "organization": "Chips Input AutoComplete",
+      "repository": "BruckCode/chips_input_autocomplete",
+      "url": "https://github.com/BruckCode/chips_input_autocomplete",
+      "contributions": [
+        "Fix FormFieldKey Initialization Error (PR merged) - fixed an error caused by setting 'initialChips'"
+      ]
     }
   ],
   "leadership_and_community": [
     {
       "role": "Coding Mentor",
-      "organization": "Code The Dream",
-      "duration": "September 2025 - Present",
-      "description": "Mentored aspiring developers through hands-on coding sessions, system design discussions, and project reviews."
+      "organization": "Code the Dream",
+      "description": "Mentored aspiring developers through hands-on coding sessions, system design discussions, and project reviews, accelerating learning outcomes and technical confidence. Guided mentees on best practices in software development, resulting in measurable improvements in code quality and problem-solving efficiency."
     },
     {
       "role": "Hackathon Judge",
       "organization": "HackNC",
-      "duration": "October 2025",
-      "description": "Evaluated 50+ hackathon submissions across full-stack, mobile, and AI domains."
+      "date": "October 2025",
+      "description": "Evaluated 50+ hackathon submissions across full-stack, mobile, and AI domains, applying rigorous technical and product criteria to identify high-impact solutions. Provided actionable feedback to teams, improving project clarity, technical robustness, and real-world feasibility."
     },
     {
-      "role": "Backend Developer",
-      "organization": "App Team Carolina",
-      "duration": "September 2024 - December 2024"
+      "role": "Team Lead",
+      "organization": "Hackathons & Internships",
+      "date": "May 2023",
+      "description": "Executed projects with a 95% on-time delivery rate and a 40% reduction in bugs, highlighting adept project management skills and proactive problem-solving under pressure. Led teams to victory in multiple National Level Hackathons, achieving a 90% success rate as Team Lead."
     },
     {
-      "role": "Student President",
+      "role": "Android Facilitator",
+      "organization": "Google Developer Student Club",
+      "date": "January 2023",
+      "description": "Orchestrated three impactful events, resulting in a 25% rise in Android development proficiency and a 20% increase in knowledge-sharing interactions. Drove a 30% surge in student engagement in tech learning initiatives, setting new standards for educational excellence."
+    },
+    {
+      "role": "President",
       "organization": "Student Activity Cell, Indus University",
-      "duration": "June 2021 - June 2022",
-      "highlights": [
-        "Managed a team of 30 students",
-        "Successfully executed over 80 events"
-      ]
-    },
-    {
-      "role": "Google Android Jams Facilitator",
-      "organization": "Google Developer Student Clubs, Indus University",
-      "duration": "December 2021 - January 2022",
-      "highlights": [
-        "Organized and led three educational events on Android development"
-      ]
+      "date": "January 2022",
+      "description": "Masterminded dynamic student events with precision and foresight, prioritizing efficiency and strategic planning. Led and energized a 30-strong student team, ensuring flawless execution of 80+ events. Skillfully orchestrated efforts for seamless event delivery."
     }
   ],
   "publications": [
@@ -384,26 +600,28 @@
     {
       "name": "Deepak Datta",
       "designation": "CEO @ PracticeBuzz",
-      "message": "Yashas's contributions as a Senior Software Engineer at PracticeBuzz are outstanding. His role in developing the DentaVacation app showcased technical prowess, innovative design, and a commitment to security. His adaptability, collaboration, and pursuit of excellence are commendable."
+      "message": "Yashas's contributions as a Software Engineer at PracticeBuzz are outstanding. His role in developing the DentaVacation app showcased technical prowess, innovative design, and a commitment to security. His adaptability, collaboration, and pursuit of excellence are commendable."
     },
     {
       "name": "Manjunath Jakkur Munigowda",
       "designation": "Director @ EcoConsumer Solutions Pvt. Ltd.",
-      "message": "Yashas's time as a Flutter Developer Intern was marked by exceptional skill and dedication. His problem-solving abilities and innovative solutions significantly enhanced our mobile app development. His commitment to excellence, coupled with his teamwork and communication skills, made him an invaluable asset."
+      "message": "Yashas's time as a Flutter Developer Intern was marked by exceptional skill and dedication. His problem-solving abilities and innovative solutions significantly enhanced our mobile app development. His commitment to excellence, coupled with his teamwork and communication skills, made him an invaluable asset. I highly recommend him for any role requiring a skilled software developer."
     }
   ],
   "metrics": {
-    "users_supported": "10k+",
-    "latency_reduction": "40%",
-    "global_reach": "100k+",
-    "crash_rate_reduction": "40%",
-    "uptime": "99.8%"
+    "high_concurrency": "10k+ active users supported via scalable cloud infrastructure and efficient backend logic",
+    "latency_optimization": "40% faster data retrieval across the stack, from database queries to frontend rendering",
+    "global_deployment": "100k+ users reached deploying robust & scalable software systems to massive global audiences",
+    "system_resilience": "40% reduction in production errors via clean architecture and rigorous CI/CD"
   },
   "links": {
     "website": "https://yashashm.dev",
     "linkedin": "https://linkedin.com/in/yashashm",
     "github": "https://github.com/yashas-hm",
-    "blog": "https://yashashm.medium.com",
-    "email": "yashashm.dev@gmail.com"
+    "medium": "https://yashashm.medium.com",
+    "email": "yashashm.dev@gmail.com",
+    "resume": "https://yashashm.dev/resume",
+    "contributions": "https://yashashm.dev/contributions",
+    "talks": "https://github.com/yashas-hm/talks"
   }
 }
