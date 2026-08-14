@@ -1,0 +1,14 @@
+vercel.json
+  h_489c0496f9f57d 2-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "b18c278c05178cd3bd33d465449851ae1bde92d2",
+  "prompts": {},
+  "humans": {
+    "h_489c0496f9f57d": {
+      "author": "Yashas H Majmudar <yashashm.dev@gmail.com>"
+    }
+  }
+}
