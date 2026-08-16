@@ -263,7 +263,7 @@ Dependabot PRs can't run the local pre-commit hook, so `.github/workflows/sync_r
 
 ## Preview
 
-![ss0](./assets/ss0.png)
-![ss1](./assets/ss1.png)
-![ss2](./assets/ss2.png)
-![ss3](./assets/ss3.png)
+![ss0](.gitassets/ss0.png)
+![ss1](.gitassets/ss1.png)
+![ss2](.gitassets/ss2.png)
+![ss3](.gitassets/ss3.png)
