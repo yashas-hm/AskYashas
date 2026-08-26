@@ -1,0 +1,20 @@
+.github/workflows/check_requirements.yml
+  h_489c0496f9f57d 23,27
+.github/workflows/data_change_action.yml
+  h_489c0496f9f57d 16,18
+.github/workflows/smoke_test.yml
+  h_489c0496f9f57d 14,16
+.github/workflows/sync_requirements_dependabot.yml
+  h_489c0496f9f57d 18,22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "fac81bccc6cf41c131d3b20f01dc20002cf7b4d1",
+  "prompts": {},
+  "humans": {
+    "h_489c0496f9f57d": {
+      "author": "Yashas H Majmudar <yashashm.dev@gmail.com>"
+    }
+  }
+}
