@@ -3,11 +3,11 @@ name = "askyashas"
 version = "1.0.0"
 requires-python = ">=3.14"
 dependencies = [
-    "fastapi>=0.124.0",
-    "google-generativeai>=0.8.5",
-    "pydantic>=2.12.5",
-    "python-dotenv>=1.1.0",
-    "starlette>=0.50.0",
+    "fastapi>=0.141.1",
+    "google-generativeai>=0.8.6",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.3",
+    "starlette>=1.6.0",
     "upstash-vector>=0.8.0",
-    "uvicorn>=0.38.0",
+    "uvicorn>=0.52.3",
 ]
