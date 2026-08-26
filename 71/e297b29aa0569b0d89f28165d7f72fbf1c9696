@@ -1,0 +1,14 @@
+.github/workflows/check_requirements.yml
+  h_489c0496f9f57d 24-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "71e297b29aa0569b0d89f28165d7f72fbf1c9696",
+  "prompts": {},
+  "humans": {
+    "h_489c0496f9f57d": {
+      "author": "Yashas H Majmudar <yashashm.dev@gmail.com>"
+    }
+  }
+}
