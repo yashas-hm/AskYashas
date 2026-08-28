@@ -9,5 +9,5 @@ dependencies = [
     "python-dotenv>=1.2.3",
     "starlette>=1.6.0",
     "upstash-vector>=0.8.0",
-    "uvicorn>=0.52.3",
+    "uvicorn>=0.52.4",
 ]
