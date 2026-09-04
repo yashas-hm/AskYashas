@@ -5,9 +5,9 @@ requires-python = ">=3.14"
 dependencies = [
     "fastapi>=0.141.1",
     "google-generativeai>=0.8.6",
-    "pydantic>=2.13.4",
+    "pydantic>=2.13.5",
     "python-dotenv>=1.2.3",
     "starlette>=1.6.0",
     "upstash-vector>=0.8.0",
-    "uvicorn>=0.52.3",
+    "uvicorn>=0.52.4",
 ]

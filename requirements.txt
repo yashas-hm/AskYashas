@@ -90,12 +90,12 @@ pyasn1==0.6.1
     #   rsa
 pyasn1-modules==0.4.2
     # via google-auth
-pydantic==2.13.4
+pydantic==2.13.5
     # via
     #   askyashas
     #   fastapi
     #   google-generativeai
-pydantic-core==2.46.4
+pydantic-core==2.46.5
     # via pydantic
 pyparsing==3.2.5
     # via httplib2
@@ -129,5 +129,5 @@ uritemplate==4.2.0
     # via google-api-python-client
 urllib3==2.6.0
     # via requests
-uvicorn==0.52.3
+uvicorn==0.52.4
     # via askyashas
