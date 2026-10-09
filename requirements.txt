@@ -23,7 +23,7 @@ colorama==0.4.6 ; sys_platform == 'win32'
     # via
     #   click
     #   tqdm
-fastapi==0.141.1
+fastapi==0.142.2
     # via askyashas
 google-ai-generativelanguage==0.6.15
     # via google-generativeai
@@ -72,6 +72,8 @@ idna==3.11
     #   anyio
     #   httpx
     #   requests
+opentelemetry-api==1.45.1
+    # via fastapi
 proto-plus==1.26.1
     # via
     #   google-ai-generativelanguage
@@ -90,22 +92,22 @@ pyasn1==0.6.1
     #   rsa
 pyasn1-modules==0.4.2
     # via google-auth
-pydantic==2.13.4
+pydantic==2.13.5
     # via
     #   askyashas
     #   fastapi
     #   google-generativeai
-pydantic-core==2.46.4
+pydantic-core==2.46.5
     # via pydantic
 pyparsing==3.2.5
     # via httplib2
-python-dotenv==1.2.3
+python-dotenv==1.2.4
     # via askyashas
 requests==2.32.5
     # via google-api-core
 rsa==4.9.1
     # via google-auth
-starlette==1.6.0
+starlette==1.7.0
     # via
     #   askyashas
     #   fastapi
@@ -116,6 +118,7 @@ typing-extensions==4.15.0
     #   fastapi
     #   google-generativeai
     #   grpcio
+    #   opentelemetry-api
     #   pydantic
     #   pydantic-core
     #   typing-inspection
@@ -129,5 +132,5 @@ uritemplate==4.2.0
     # via google-api-python-client
 urllib3==2.6.0
     # via requests
-uvicorn==0.52.3
+uvicorn==0.54.0
     # via askyashas
